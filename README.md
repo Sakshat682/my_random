@@ -5,14 +5,15 @@
 4. Now after all this the package is added into your global packages list , so now you can directly import them like: 
 ```python 
 import my_random
-from my_random import *
-from my_random import random_gen
-from my_random.random_gen import PseudoGen
+# from my_random import *
+# from my_random import random_gen
+# from my_random.random_gen import PseudoGen
 from my_random import PseudoGen as PG
-from my_random import random_gauss_dist
+from my_random import random_gauss_dist as rgd
 
 N = 100
-print(PG().uniform(N)) #-> generates random number between [0,1)
+print(PG().uniform(N)) # generates random number between [0,1)
+print(rgd.std_dis(n,seed,mean,std)) # Generates Random number over a gaussian distribution (mean, std)
 ```
 5. Package Structure is like :
 ```python
