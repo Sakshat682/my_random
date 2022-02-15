@@ -1,3 +1,21 @@
+
+# my_random
+Python Package
+
+This package provides various methods to generate randomness
+
+Provides
+--------
+  1. Random Floats & Integer generation function
+  2. Random generation of numbers over a gaussian distribution
+  3. Choice function - to choose item randomly from a list
+
+Available Modules
+-----------------
+``random_gen.py``        Provides methods like random, ranChoice, uniform, etc <br>
+``random_gauss_dist.py`` It gives method to generate random numbers over a gaussian distribution
+
+-----------------------------------
 # How to use this package?
 1. first go to the site_packages directory inside your python, like in my case I have done this <br>```cd C:\Users\<your-user-name>\anaconda3\Lib\site-packages```
 2. Then clone this repository at that location using ```git clone https://github.com/Sakshat682/my_random.git```
@@ -26,26 +44,10 @@ my_random/
                         └── ranChoiceIntRange(n,start,end) # function def is: ranChoiceIntRange(self,n,seed=os.getpid()+time.time(),start=1,end=100)
                         └── randChoice(n,lt) # function def is: randChoice(self,n,lt,seed) # lt is a list of items
 ```
-----------------------------
-# my_random
-Python Package
-
-This package provides various methods to generate randomness
-
-Provides
---------
-  1. Random Floats & Integer generation function
-  2. Random generation of numbers over a gaussian distribution
-  3. Choice function - to choose item randomly from a list
-
-Available Modules
------------------
-``random_gen.py``        Provides methods like random, ranChoice, uniform, etc <br>
-``random_gauss_dist.py`` It gives method to generate random numbers over a gaussian distribution
 
 ----------------
 # 1. random_gen.py -> Python Module
-----------------
+
 Pseudo Random Generator
 
 It genrates pseudo random numbers using Linear Congruential Generator function.
@@ -73,7 +75,7 @@ randChoice() ->          Random sample from 1-D array or list. <br>
 
 ---------------------------
 # 2. random_gauss_dist.py -> Python Module
----------------------------
+
 Pseudo Random Generator Gauss
 
 It genrates pseudo random numbers over a gaussian distribution.
