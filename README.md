@@ -62,9 +62,9 @@ m =    modulus<br>
 
 PseudoGen(Class)
 ---------------------------------------
-a                multilplier
-c                increment
-m                modulus
+a =     multilplier<br>
+c =     increment<br>
+m =     modulus<br>
 
 Utility functions
 ---------------------------------------------------------------------------------
@@ -82,9 +82,9 @@ It genrates pseudo random numbers over a gaussian distribution.
 
 PseudoGen(Class)
 -------------------------------------
-a  =              multilplier
-c  =              increment
-m  =              modulus
+a  =              multilplier<br>
+c  =              increment<br>
+m  =              modulus<br>
 
 Utility functions
 ---------------------------------------------------------------------------------
