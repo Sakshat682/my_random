@@ -77,6 +77,7 @@ def std_dis(n,seed=os.getpid()+time.time(),mean=0, std=1):
     ran_y_list = [round((2*i-1), 4) for i in uni_list]
     std_dis_x_list = []
     for y in ran_y_list:
+        # to remove outliers inp is changed from y to -> 2y-1 OR 2y+1
         if y>=0:
             inp = 2*y - 1
         else:
