@@ -27,15 +27,14 @@ from scipy import special
 import numpy as np
 from matplotlib import pyplot as plt
 from my_random.random_gen import PseudoGen as pg
-from my_random import random_gauss_dist as rgd
 
 
 plt.rcParams["figure.figsize"] = [10, 5]
 plt.rcParams["figure.autolayout"] = True
 
-m = pg().__m
-a = pg().__a
-c = pg().__c
+# m = pg().__m
+# a = pg().__a
+# c = pg().__c
 
 def std_dis(n,seed=os.getpid()+time.time(),mean=0, std=1):
     """
@@ -73,7 +72,7 @@ def std_dis(n,seed=os.getpid()+time.time(),mean=0, std=1):
     ------------
 
     """
-    uni_list = pg.uniform(n,seed)
+    uni_list = pg().uniform(n,seed)
     #  2*y -1 (change range from (0,1) to (-1,1))
     ran_y_list = [round((2*i-1), 4) for i in uni_list]
     std_dis_x_list = []
@@ -82,10 +81,10 @@ def std_dis(n,seed=os.getpid()+time.time(),mean=0, std=1):
             inp = 2*y - 1
         else:
             inp = 2*y +1
-
-        if (inp)<= -1:
+        # inp=y
+        if inp<= -1:
             std_dis_x_list.append(mean-4*std)
-        elif (inp)>=1:
+        elif inp>=1:
             std_dis_x_list.append(mean+4*std)
         else:
             std_dis_x_list.append(round((math.sqrt(2)*std*(special.erfinv(inp))+mean),4))
@@ -100,11 +99,11 @@ def main():
 
     std_dis_list = std_dis(n,seed,mean,std)
     # print(std_dis_list)
-    # u=0
-    # for i in std_dis_list:
-    #     u += i
-    # u = round(u/n,2)
-    # print(u)
+    u=0
+    for i in std_dis_list:
+        u += i
+    u = round(u/n,2)
+    print(u)
     count, bins_count = np.histogram(std_dis_list, bins=20)
     pdf = count / sum(count)
     cdf = np.cumsum(pdf)
